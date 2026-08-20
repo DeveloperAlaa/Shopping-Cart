@@ -1,0 +1,80 @@
+[
+    {
+        "id": "bb95ee36-55e3-4f19-a74b-80ebaea9f120",
+        "title": "air tag",
+        "price": "89",
+        "url": "/assets/air-tag.jpg"
+    },
+    {
+        "id": "49724bab-1ed0-45f3-9083-b4d1f6c3e650",
+        "title": "apple watch",
+        "price": "499",
+        "url": "/assets/apple-watch.jpg"
+    },
+    {
+        "id": "015049d8-36e3-44cc-95cb-cf6640f18437",
+        "title": "galaxy fold",
+        "price": "2000",
+        "url": "/assets/galaxy-fold.jpg"
+    },
+    {
+        "id": "3344be7d-6120-4a8c-89d3-e303022df614",
+        "title": "headphones ",
+        "price": "649",
+        "url": "/assets/headphones.jpg"
+    },
+    {
+        "id": "20d6b17c-85bd-429c-b25e-d4775d70c4b3",
+        "title": "ipad pro",
+        "price": "799",
+        "url": "/assets/ipad.jpg"
+    },
+    {
+        "id": "739528f0-254e-4764-a0d0-81add5347a5e",
+        "title": "iphone x",
+        "price": "399",
+        "url": "/assets/iphone-x.jpg"
+    },
+    {
+        "id": "9ca3b238-f7e4-4fc9-b268-7ee3eefde852",
+        "title": "logitech mouse",
+        "price": "89",
+        "url": "/assets/logitech-mouse.jpg"
+    },
+    {
+        "id": "e19c32e4-4236-4e2a-8f5b-ad72e25ed2b3",
+        "title": "air tag",
+        "price": "89",
+        "url": "/assets/air-tag.jpg"
+    },
+    {
+        "id": "9e45cc29-901a-4495-a8e9-7b2b98161d15",
+        "title": "mac pro",
+        "price": "1199",
+        "url": "/assets/mac-pro.jpg"
+    },
+    {
+        "id": "30d8c76d-df03-4dac-a791-3a17e20adce4",
+        "title": "macbook pro",
+        "price": "1699",
+        "url": "/assets/macbook.jpg"
+    },
+    {
+        "id": "7f1b0270-216b-43b0-8c17-64e497e25c94",
+        "title": "mechanical keyboard",
+        "price": "259",
+        "url": "/assets/mechanical-keyboard.jpg"
+    },
+    {
+        "id": "2e561af2-ca99-49eb-b24f-5944b67862c5",
+        "title": "nintindo switch",
+        "price": "749",
+        "url": "/assets/nintindo-switch.jpg"
+    },
+    {
+        "id": "2f9126d4-9144-4f8b-91d6-ab65d2cc7136",
+        "title": "xbox controller",
+        "price": "249",
+        "url": "/assets/xbox-controller.jpg"
+    }
+]

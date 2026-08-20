@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router"
 import Store from './routes/store'
 import Home from './routes/home'
 import RootLayout from './components/root-layout'
+import { ShoppingCartProvider } from './contexts/shoppingCartContext'
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ShoppingCartProvider>
+      <RouterProvider router={router} />
+    </ShoppingCartProvider>
   </StrictMode>,
 )
