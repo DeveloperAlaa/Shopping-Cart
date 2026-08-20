@@ -1,0 +1,13 @@
+import { Outlet } from "react-router";
+import Navbar from "./navbar";
+
+export default function RootLayout() {
+    return (
+        <div className="">
+            <Navbar />
+            <main className="w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[65%] mx-auto px-5 py-5">
+                <Outlet />
+            </main>
+        </div>
+    )
+}
