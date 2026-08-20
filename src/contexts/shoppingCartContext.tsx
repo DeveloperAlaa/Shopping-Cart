@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import { useLocalStorage } from "../hooks/useLocalStorage"
 
 
 type CartItem = {
@@ -35,7 +36,8 @@ type ShoppingCartProviderProps = {
 }
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
-    const cartItems: CartItem[] = []
+    const STORAGE_SHOPPING_CART = "shopping-cart"
+    const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(STORAGE_SHOPPING_CART, [])
     const [cartIsOpen, setCartIsOpen] = useState(false)
 
     // getItemQuantity  ✅
@@ -58,32 +60,36 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) =>
 
     const incereaseItemQuantity = (id: string) => {
         const itemFounded = cartItems.find(item => item.id === id)
-        if (itemFounded) {
-            [...cartItems, { id, quantity: 1 }]
+        if (!itemFounded) {
+            setCartItems(current => ([...current, { id, quantity: 1 }]))
         } else {
-            cartItems.map(item => {
-                if (item.id === id) {
-                    return { ...item, quantity: item.quantity + 1 }
-                }
-            })
+
+            setCartItems(current => [
+                ...current.map(item =>
+                    item.id === id
+                        ? { ...item, quantity: item.quantity + 1 } as CartItem
+                        : item)
+            ])
+
         }
     }
 
     const decreaseItemQuantity = (id: string) => {
         const itemFounded = cartItems.find(item => item.id === id)
         if (itemFounded?.quantity === 1) {
-            cartItems.filter(item => item.id !== id)
+            setCartItems(current => current.filter(item => item.id !== id))
         } else {
-            cartItems.map(item => {
-                if (item.id === id) {
-                    return { ...item, quantity: item.quantity - 1 }
-                }
-            })
+            setCartItems(current => [
+                ...current.map(item => item.id === id
+                    ? { ...item, quantity: item.quantity - 1 } as CartItem
+                    : item
+                )
+            ])
         }
     }
 
     const removeItem = (id: string) => {
-        cartItems.filter(item => item.id !== id)
+        setCartItems(current => current.filter(item => item.id !== id))
     }
 
     const toggleCart = () => {
