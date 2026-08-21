@@ -15,6 +15,7 @@ type ShoppingCartContextType = {
     toggleCart: () => void
     cartItems: CartItem[]
     cartItmesQuantity: number
+    cartIsOpen: boolean
 }
 
 const ShoppingCartContext = createContext<ShoppingCartContextType>({} as ShoppingCartContextType)
@@ -100,11 +101,12 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) =>
         return quantity + item.quantity
     }, 0)
 
-
+    
     return (
         <ShoppingCartContext.Provider value={{
             cartItems,
             cartItmesQuantity,
+            cartIsOpen,
             decreaseItemQuantity,
             getItemQuantity,
             incereaseItemQuantity,

@@ -3,7 +3,7 @@ import ProductCard from "../components/product-card";
 
 export default function Store() {
   return (
-    <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+    <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
       {
         products.map(product => (
           <ProductCard

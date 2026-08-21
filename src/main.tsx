@@ -6,6 +6,7 @@ import Store from './routes/store'
 import Home from './routes/home'
 import RootLayout from './components/root-layout'
 import { ShoppingCartProvider } from './contexts/shoppingCartContext'
+import CartDrawer from './components/cart-drawer'
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        index: true,
         path: "/store",
         element: <Store />,
       }
@@ -28,7 +30,8 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ShoppingCartProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={ router } />
+      <CartDrawer />
     </ShoppingCartProvider>
   </StrictMode>,
 )
